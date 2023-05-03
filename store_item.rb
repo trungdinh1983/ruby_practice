@@ -21,6 +21,12 @@ class Item
   # end
 end
 
+class Food < Item
+  def initialize(shelf_life)
+    super
+    @pie = shelf_life[:pie]
+end
+
 item1 = Item.new(color: "red", price: "70", size: "medium")
 item2 = Item.new(color: "blue", price: "1000", size: "large")
 item3 = Item.new(color: "white", price: "30", size: "small")
