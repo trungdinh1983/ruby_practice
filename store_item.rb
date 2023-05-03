@@ -2,10 +2,10 @@ attr_reader :color, :price, :size  #Replace Line 10-12
 #attr_writer " "
 
 class Item
-  def initialize(input_color, input_price, input_size)
-    @color = input_color
-    @price = input_price
-    @size = input_size
+  def initialize(input_options)
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @size = input_options[:size]
   end
 
   # def color
@@ -21,9 +21,9 @@ class Item
   # end
 end
 
-item1 = Item.new("red", "70", "medium")
-item2 = Item.new("blue", "1000", "large")
-item3 = Item.new("white", "30", "small")
+item1 = Item.new(color: "red", price: "70", size: "medium")
+item2 = Item.new(color: "blue", price: "1000", size: "large")
+item3 = Item.new(color: "white", price: "30", size: "small")
 
 # speaker = { color: "red", price: "70", size: "medium" }
 # tv = { color: "black", price: "1000", size: "large" }
