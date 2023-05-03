@@ -30,3 +30,9 @@ end
 
 car = Car.new(brake: "0", accelerate: "10")
 bike = Bike.new(brake: "0", accelerate: "10")
+
+bike.accelerate
+car.accelerate
+
+car.honk_horn
+car.ring_bell
