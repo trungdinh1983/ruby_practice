@@ -2,6 +2,7 @@ class Car
   def initialize
     @speed = 0
     @direction = "north"
+    
   end
 
   def brake
@@ -19,12 +20,16 @@ class Car
   def honk_horn
     puts "Beeeeeeep!"
   end
+
+  def brand
+    @brand = honda
+
 end
 
 class Bike < Car
-  def initialize
-    @speed = 0
-    @direction = "north"
+  def initialize(brand)
+   super
+   @brand = honda
   end
 end
 
@@ -36,3 +41,5 @@ car.accelerate
 
 car.honk_horn
 car.ring_bell
+
+car.brand
