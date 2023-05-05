@@ -1,7 +1,8 @@
-attr_reader :color, :price, :size  #Replace Line 10-12
 #attr_writer " "
 
 class Item
+  attr_reader :color, :price, :size  #Replace Line 10-12
+
   def initialize(input_options)
     @color = input_options[:color]
     @price = input_options[:price]
@@ -25,6 +26,7 @@ class Food < Item
   def initialize(shelf_life)
     super
     @pie = shelf_life[:pie]
+  end
 end
 
 item1 = Item.new(color: "red", price: "70", size: "medium")
